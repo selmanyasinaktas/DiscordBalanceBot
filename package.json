@@ -1,0 +1,26 @@
+{
+  "name": "discord-balance-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for virtual economy management with balance tracking and transfers",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "deploy": "node deploy-commands.js"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "economy",
+    "balance"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.23.2",
+    "dotenv": "^17.2.3",
+    "pg": "^8.16.3"
+  }
+}
