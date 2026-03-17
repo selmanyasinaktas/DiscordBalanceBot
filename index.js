@@ -402,6 +402,7 @@ client.on('messageCreate', async (message) => {
     const gonderenData = await bakiyeGetir(message.author.id)
     if (gonderenData.balance < miktar) {
       return await safeReply(
+        message,
         `❌ Yetersiz bakiye! Mevcut bakiyen: **${gonderenData.balance} Silver**`
       )
     }
@@ -415,6 +416,7 @@ client.on('messageCreate', async (message) => {
     if (transferSonuc.error) {
       if (transferSonuc.error === 'yetersiz_bakiye') {
         return await safeReply(
+          message,
           `❌ Yetersiz bakiye! Mevcut bakiyen: **${transferSonuc.balance} Silver**`
         )
       }
